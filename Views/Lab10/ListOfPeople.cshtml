@@ -1,0 +1,28 @@
+﻿@model List<Lab10.Entities.Person>
+
+<h1>List of Participants</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Patronymic</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Has Job</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var person in Model)
+        {
+            <tr class="text-center">
+                <td>@person.LastName</td>
+                <td>@person.FirstName</td>
+                <td>@person.Patronymic</td>
+                <td>@person.Age</td>
+                <td>@person.Gender</td>
+                <td>@person.HasJob</td>
+            </tr>
+        }
+    </tbody>
+</table>
